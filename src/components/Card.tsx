@@ -15,19 +15,18 @@ const types = {
 
 type CardVariantsProps = VariantProps<typeof cardVariants>;
 
-const cardVariants = cva("space-y-1 rounded p-2", {
-  variants: {
-    type: {
-      test: "bg-yellow-2 text-yellow-12",
-      hw: "bg-blue-2 text-blue-12",
-      work: "bg-orange-2 text-orange-12",
-      default: "bg-gray-2 text-gray-12",
+const cardVariants = cva(
+  "border border-gray-3 space-y-1 rounded p-2 bg-gray-2 text-gray-12",
+  {
+    variants: {
+      type: {
+        test: "bg-yellow-2 text-yellow-12 border-yellow-3",
+        hw: "bg-blue-2 text-blue-12 border-blue-3",
+        work: "bg-orange-2 text-orange-12 border-orange-3",
+      },
     },
   },
-  defaultVariants: {
-    type: "default",
-  },
-});
+);
 
 type CardTimeVariantsProps = VariantProps<typeof cardTimeVariants>;
 
@@ -73,7 +72,7 @@ type Props = HTMLProps<HTMLDivElement> & {
 };
 
 export function Card({
-  registry: { id, type, subjects, title, startAt, endAt },
+  registry: { type, subjects, title, startAt, endAt },
 }: Props) {
   return (
     <div

@@ -23,15 +23,17 @@ export function List({
 }: Props) {
   return (
     <section {...props}>
-      {children && <h2 className="mb-1  font-bold uppercase">{children}</h2>}
+      {children && (
+        <h2 className="mb-1 text-xl font-bold uppercase">{children}</h2>
+      )}
 
       <ul className="space-y-2">
         {collection.length
           ? collection.map(([date, registries]) => {
               return (
-                <li key={createId()}>
+                <li key={createId()} className="space-y-1">
                   {showDays && (
-                    <h3 className="font-medium">
+                    <h3 className="text-lg font-medium">
                       {formatDatePattern
                         ? format(new Date(date), formatDatePattern, {
                             locale: ptBR,
