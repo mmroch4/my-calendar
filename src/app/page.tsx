@@ -27,7 +27,7 @@ export default async function Hub() {
       <List
         id="this-weeks-registries"
         collection={Array.from(thisWeekRegistries.entries())}
-        formatDatePattern="cccc' • 'd' de 'MMMM"
+        formatDatePattern="cccc' ('d' de 'MMMM')'"
       >
         Esta semana
       </List>
@@ -38,7 +38,9 @@ export default async function Hub() {
         id="more-registries"
         collection={Array.from(othersRegistries.entries())}
         formatDatePattern="d' de 'MMMM' 'yyyy' ('cccc')'"
-      />
+      >
+        Outros
+      </List>
     </main>
   );
 }
