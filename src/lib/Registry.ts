@@ -11,7 +11,7 @@ interface IClientResponse {
 
 export class Registry {
   private registries: IRegistry[] = [];
-  public readonly today: Date = new Date("2023-10-08");
+  public readonly today: Date = new Date();
   public readonly todayISO = formatISO(this.today, { representation: "date" });
 
   private readonly fetchQueryDocument = gql`
