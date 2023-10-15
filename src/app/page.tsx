@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "Meu calendário",
 };
 
+export const revalidate = 2 * 60; // 1 minute
+
 export default async function Hub() {
   const registries = new Registry();
   await registries.fetch();
