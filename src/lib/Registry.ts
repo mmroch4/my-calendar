@@ -20,6 +20,7 @@ export class Registry {
         stage: PUBLISHED
         orderBy: date_ASC
         where: { NOT: { date_lt: "${this.todayISO}" } }
+        first: 1000
       ) {
         id
         title
