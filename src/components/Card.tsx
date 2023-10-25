@@ -63,6 +63,8 @@ const boxVariants = cva("rounded px-2 py-1 text-xs font-medium uppercase", {
       fis: "bg-plum-5 text-plum-12",
       qui: "bg-ruby-5 text-ruby-12",
       fil: "bg-tomato-5 text-tomato-12",
+      ilc: "bg-teal-5 text-teal-12",
+      cambridge: "bg-orange-5 text-orange-12",
     },
   },
 });
