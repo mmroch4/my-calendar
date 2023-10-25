@@ -7,4 +7,6 @@ export type Subject =
   | "edf"
   | "fis"
   | "qui"
-  | "fil";
+  | "fil"
+  | "ilc"
+  | "cambridge";
